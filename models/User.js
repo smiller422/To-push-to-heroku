@@ -20,6 +20,13 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    phone_number: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        isphone_number: true,
+      },
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -32,7 +39,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [6],
+        len: [8],
       },
     },
   },
