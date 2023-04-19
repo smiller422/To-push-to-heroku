@@ -1,14 +1,12 @@
-const express = require('express') //added sun.am
-
+// const express = require('express') 
 const Sequelize = require('sequelize');
-
 require('dotenv').config();
 
-let sequelize;
+
+let = sequelize;
 
     if (process.env.JAWSDB_URL) {
     sequelize = new Sequelize(process.env.JAWSDB_URL);
-
     } else {
   sequelize = new Sequelize(
     process.env.DB_NAME,
