@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>User Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="stylesheet" type="text/css" href="/public/css/jass.css" />
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css" />
+  </head>
+  <body>
+
+  {{{body}}}
+
+  <div class="row">
+  <div class="col-md-6">
+    <h2>Login</h2>
+
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">email:</label>
+        <input class="form-input" type="text" id="email-login" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h2>Signup</h2>
+
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+<script src="./js/login.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- {
+user: {
+firstname: "Tiffany",
+lastname: "Parks",
+},
+}
+
+Outcome will be generated as below
+
+Tiffany Parks
+
+Deprecated / sytax is acceptable, so you can writ the above template as:
+
+{{user/firstname}} {{user/lastname}} --}}
+

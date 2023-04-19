@@ -25,14 +25,32 @@ const sess = {
 
 app.use(session(sess));
 
-// app.engine('handlebars', hbs.engine);
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
+// //instead of app.set('view engine', 'handlebars'); 
+// app.set('view engine', 'hbs');
+// //instead of app.engine('handlebars', handlebars({
+// app.engine('hbs', handlebars({
+// layoutsDir: __dirname + '/views/layouts',
+// //new configuration parameter
+// extname: 'hbs'
+// }));
+
+// app.get('/', (req, res) => {
+//   //Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
+//   res.render('main', {layout : 'index'});
+//   });
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
+
+//Sets a basic route
+// app.get('/', (req, res) => res.send('Hello World !'));
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
