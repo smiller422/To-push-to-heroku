@@ -5,14 +5,8 @@ const router = require('express').Router();
 router.get('/', async (req, res) => {
 
     console.log("IN THE USER ROUTES");
-    res.render('homepage');
+    res.render('login');
 });
-
-
-
-
-
-
 
 
 module.exports = router;
