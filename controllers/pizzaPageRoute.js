@@ -23,3 +23,10 @@ router.get("/", async (req, res) => {
 });
 
 module.exports = router;
+
+
+//requiring our user and order models, in the model folder, 
+//get req to the menu page, root is '/' , 
+//uses the Sequelize to fetch order data from the database using findall method.
+//fetched order data is savedusing the get method.
+//res.render meansd its going to menu page psssing the data as a var we can use in views

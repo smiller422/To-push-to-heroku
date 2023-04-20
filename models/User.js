@@ -1,3 +1,55 @@
+// const { Model, DataTypes } = require('sequelize');
+// const sequelize = require('../config/connection');
+
+// class User extends Model {}
+
+// User.init(
+//   {
+//     id: {
+//       type: DataTypes.INTEGER,
+//       allowNull: false,
+//       primaryKey: true,
+//       autoIncrement: true,
+//     },
+//     username: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//     },
+//     phone_number: {
+//       type: DataTypes.INTEGER,
+//       allowNull: false,
+//       validate: {
+//         isphone_number: true,
+//       },
+//     },
+//     email: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//       unique: true,
+//       validate: {
+//         isEmail: true,
+//       },
+//     },
+//     password: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//       validate: {
+//         len: [8],
+//       },
+//     },
+//   },
+//   {
+//     sequelize,
+//     timestamps: false,
+//     freezeTableName: true,
+//     underscored: true,
+//     modelName: 'user',
+//   }
+// );
+
+// module.exports = User;
+
+
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -14,13 +66,7 @@ User.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    phone_number: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        isphone_number: true,
-      },
+      unique: true,
     },
     email: {
       type: DataTypes.STRING,
@@ -33,9 +79,6 @@ User.init(
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [8],
-      },
     },
   },
   {

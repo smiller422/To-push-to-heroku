@@ -41,6 +41,11 @@ sequelize.sync({ force: false }).then(() => {
 });
 
 
+//brings in our dependencies, middlewear, routes, and models
+//controllers folder is where we put our routes-
+//they handle http req and route them where they go
+
+
 
 
 

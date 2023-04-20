@@ -1,7 +1,7 @@
 
 
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { Pizza } = require('../../models');
 //rec.body is the alternative  to req.params
 router.post('/', async (req, res) => {
   console.log("pizzaroutes")
@@ -21,4 +21,6 @@ router.post('/', async (req, res) => {
 
   module.exports = router;
 
+
+  //post req to log in, root path '/' , saved in sessions if succesfull
 

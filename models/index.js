@@ -10,3 +10,6 @@ Order.belongsTo(User, {
 });
 
 module.exports = { Order, User };
+
+//seting up our one to many relationship between user and order
+// bc of module.exports, we can use this in our other files
