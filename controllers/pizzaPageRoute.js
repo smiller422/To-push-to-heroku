@@ -3,6 +3,7 @@ const { User, Order } = require("../models");
 //route here gets the user ids
 router.get("/", async (req, res) => {
     console.log(req.session.user_id)
+    console.log("pizza")
   try {
     const pizzaData = await Order.findAll({
       where: {
@@ -11,7 +12,7 @@ router.get("/", async (req, res) => {
     });
 
     const pizzas = pizzaData.map((pizza) => pizza.get({ plain: true }));
-
+console.log("pizza")
     res.render("menu", {
       pizzas,
       // Pass the logged in flag to the template
@@ -22,6 +23,10 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get('/confirm',  (req, res) => {
+
+  res.render('orderConfirm');
+});
 module.exports = router;
 
 

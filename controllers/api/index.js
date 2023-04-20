@@ -5,7 +5,7 @@ const userRoutes = require('./user-routes');
 
 
 router.use('/pizza', pizzaRoutes);
-router.use('/login', userRoutes);
+router.use('/users', userRoutes);
 
 
 module.exports = router;

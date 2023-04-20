@@ -83,7 +83,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class PizzaOrder extends Model {}
-
+//these properties become field on our sql tables
 PizzaOrder.init(
   {
     id: {
@@ -104,14 +104,17 @@ PizzaOrder.init(
       type: DataTypes.TEXT,
       allowNull: false,
       get() {
-        // Getter for the 'toppings' attribute
-
-        return JSON.parse(this.getDataValue('toppings')); // Parse the value of the 'toppings' attribute from a stringified JSON format
+         return JSON.parse(this.getDataValue('toppings')); // Parse the value of the 'toppings' attribute from a stringified JSON format
       },
       set(value) {
-        // Setter for the 'toppings' attribute
-
         this.setDataValue('toppings', JSON.stringify(value)); // Stringify the value passed to the 'toppings' attribute as a JSON string
+      },
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
       },
     },
   },
@@ -120,7 +123,7 @@ PizzaOrder.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'pizza_order',
+    modelName: 'pizza_order',  //ref for for key
   }
 );
 

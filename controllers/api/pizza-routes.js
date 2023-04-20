@@ -21,9 +21,16 @@
 
 
 const router = require('express').Router();
+// const exphbs = require('express-handlebars');
+// const path = require('path');
+// const routes = require('./controllers');
+// const pizzaRoutes = require('./controllers/api/pizza-routes');
+
+
+
 const { Order } = require('../../models');
 
-router.post('/',  async (req, res) => {
+router.post('/order',  async (req, res) => {
     try {
       const newPizza = await Order.create({
         ...req.body,

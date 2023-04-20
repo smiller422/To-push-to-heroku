@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const seedPizzaOrders = require('./pizzaOrderSeed');
+const seedPizzaOrders = require('./pizzaOrder');
 const seedUsers = require('./userSeed');
 
 const seedAll = async () => {

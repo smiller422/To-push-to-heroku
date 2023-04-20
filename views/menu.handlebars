@@ -1,4 +1,4 @@
-<h1>
+{{!-- <h1>
     <a href="/Order">MENU </a><span role="img" aria-label="pizza">🍕</span>
   </h1>
 <br>
@@ -52,7 +52,7 @@
 <div role="menuitemcheckbox" tabindex="-1" aria-checked="false"><h4>Canadian Bacon</h4></div>
 <div role="menuitemcheckbox" tabindex="-1" aria-checked="false"><h4>Chicken</h4></div>
 <div role="menuitemcheckbox" tabindex="-1" aria-checked="false"><h4>Plant Base Meat</h4></div>
-<br>
+<br> --}}
 <!-- 
 <h3>Add-ons</h3>
 <li role="menuitem">Open file…</li>
@@ -62,7 +62,7 @@
 <li role="menuitem">Open file…</li>
 <li role="menuitem">Open file…</li>
 <br> -->
-
+{{!-- 
 <h2>MENU</h2>
 
 <h3><span role="img" aria-label="pizza">🍕</span>Category<span role="img" aria-label="pizza">🍕</span></h3>
@@ -101,7 +101,7 @@
 <li role="menuitem">Grilled_onion</li>
 <li role="menuitem">Pineapple</li>
 
-<script src="./js/login.js"></script>
+<script src="./js/login.js"></script> --}}
 
 <!-- [role="menuitemcheckbox"]::before {
     display: inline-block;
@@ -117,3 +117,48 @@
     color: inherit;
     content: "X";
   } -->
+
+
+  <h1>Order a Pizza</h1>
+
+<form id='pizza-order-form'>
+  <fieldset>
+    <legend>Select Pizza Size</legend>
+    <input type='radio' id='small' name='size' value='small' required />
+    <label for='small'>Small 10"</label>
+    <input type='radio' id='medium' name='size' value='medium' />
+    <label for='medium'>Medium 12"</label>
+    <input type='radio' id='large' name='size' value='large' />
+    <label for='large'>Large 14"</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Select Sauce</legend>
+    <input type='radio' id='hearty-marinara' name='sauce' value='Hearty Marinara Sauce' required />
+    <label for='hearty-marinara'>Hearty Marinara Sauce</label>
+    <input type='radio' id='honey-bbq' name='sauce' value='Honey BBQ Sauce' />
+    <label for='honey-bbq'>Honey BBQ Sauce</label>
+    <input type='radio' id='garlic-parmesan' name='sauce' value='Garlic Parmesan Sauce' />
+    <label for='garlic-parmesan'>Garlic Parmesan Sauce</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Select Toppings</legend>
+    <input type='checkbox' id='pepperoni' name='toppings' value='pepperoni' />
+    <label for='pepperoni'>Pepperoni</label>
+    <input type='checkbox' id='sausage' name='toppings' value='sausage' />
+    <label for='sausage'>Sausage</label>
+    <input type='checkbox' id='meatball' name='toppings' value='meatball' />
+    <label for='meatball'>Meatball</label>
+    <input type='checkbox' id='ham' name='toppings' value='ham' />
+    <label for='ham'>Ham</label>
+    <input type='checkbox' id='onions' name='toppings' value='onions' />
+    <label for='onions'>Onions</label>
+    <input type='checkbox' id='spinach' name='toppings' value='spinach' />
+    <label for='spinach'>Spinach</label>
+  </fieldset>
+
+  <button type='submit'>Place Order</button>
+</form>
+<script src="./js/menu.js"></script>
+
