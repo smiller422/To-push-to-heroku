@@ -1,6 +1,5 @@
 body {
 
-    /* background-color: antiquewhite; */
     text-align: center;
     padding-top: 12vh;
     background-color: red;
@@ -15,7 +14,7 @@ button {
 
     margin-top: 1vh;
     background-color: white;
-    width: 15vw;
+    width: 17vw;
     height: 4vh;
     box-shadow: 3px 3px 3px black;
     font-size: 16px;
@@ -43,6 +42,7 @@ button:hover {
     background-color: white;
     width: 30vw;
     border: 3px solid black;
+    font-size: x-large;
 }
 
 fieldset {
@@ -63,10 +63,16 @@ legend {
     width: 20vw;
     border: 3px solid black;
     margin-bottom: 5vh;
-
+    font-size: medium;
+    padding: 1vh 1vh 1vh 1vh;
 }
 
 #pizza-order-form fieldset label {
 
     font-size: 18px;
+}
+
+#order-submit {
+
+    width: 30vw;
 }
