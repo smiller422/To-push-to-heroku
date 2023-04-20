@@ -8,3 +8,7 @@ app.engine('hbs', handlebars({
     //instead of res.render('main', {layout: 'index'});
     res.render('main');
     });
+
+    //sets up rout for url with get method 
+    //when req is made to root url, callback func goes down
+    //res.render renders our main view handlebars to go to user as html
