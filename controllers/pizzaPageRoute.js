@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Order } = require("../models");
+
 //route here gets the user ids
 router.get("/", async (req, res) => {
     console.log(req.session.user_id)
@@ -12,7 +13,9 @@ router.get("/", async (req, res) => {
     });
 
     const pizzas = pizzaData.map((pizza) => pizza.get({ plain: true }));
-console.log("pizza")
+
+    console.log("pizza")
+
     res.render("menu", {
       pizzas,
       // Pass the logged in flag to the template
@@ -23,10 +26,21 @@ console.log("pizza")
   }
 });
 
-router.get('/confirm',  (req, res) => {
+router.get('/confirm',  async (req, res) => {
 
-  res.render('orderConfirm');
+  const orders = await Order.findAll();
+
+  const orderData =  orders[orders.length - 1];
+
+
+  res.render('orderConfirm', {
+    orderDataSize: orderData.size,
+    orderDataSauce: orderData.sauce,
+    orderDataToppings: orderData.toppings,
+  });
+
 });
+
 module.exports = router;
 
 

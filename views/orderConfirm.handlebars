@@ -1,3 +1,15 @@
-<div>
-    <h2>Your Order Has Been Placed. Thank You!</h2>
+
+<h2>Your Order Has Been Placed. Thank You!</h2>
+
+<div id="order-display">
+    
+    <p>1 {{orderDataSize}} Pizza With</p>
+    <p>{{orderDataSauce}}</p>
+
+    {{#each orderDataToppings}}
+        <p>{{this}}</p>
+    {{/each}}
+
+    <p><strong>Coming Right Up!</strong></p>
+
 </div>
