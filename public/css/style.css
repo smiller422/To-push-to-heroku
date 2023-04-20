@@ -1,7 +1,7 @@
 body {
 
     text-align: center;
-    padding-top: 12vh;
+    padding-top: 10vh;
     background-color: red;
 }
 
@@ -75,4 +75,25 @@ legend {
 #order-submit {
 
     width: 30vw;
+}
+
+#order-display {
+
+   font-size: x-large;
+   background-color: white;
+   width: 50vw;
+   border: 3px solid black;
+   box-shadow: 5px 5px 5px black;
+   margin: auto;
+   text-align: center;
+}
+
+ul {
+
+    list-style-type: none;
+}
+
+ul li {
+
+    margin-bottom: 3vh;
 }
