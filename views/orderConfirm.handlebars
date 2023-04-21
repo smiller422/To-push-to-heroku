@@ -2,6 +2,7 @@
 <h2>Your Order Has Been Placed. Thank You!</h2>
 
 <div id="order-display">
+    <input id="input-test" value="{{orderId}}" hidden>
     
     <p>1 {{orderDataSize}} Pizza With</p>
     <p>{{orderDataSauce}}</p>
@@ -11,5 +12,25 @@
     {{/each}}
 
     <p><strong>Coming Right Up!</strong></p>
+
+    <button id="cancelOrderForm" type="click">Cancel Order</button>
+  
+
+    <script>
+
+            document.getElementById("cancelOrderForm").addEventListener("click", function(event) {
+            event.preventDefault();
+            const id = document.getElementById('input-test').value;
+
+            fetch(`/menu/cancelOrder/${id}`, {
+
+                method: "DELETE",
+
+            })
+
+            alert("Order has been cancelled successfully!");
+        });
+
+    </script>
 
 </div>
