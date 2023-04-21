@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class PizzaOrder extends Model {}
-//these properties become field on our sql tables
+
 PizzaOrder.init(
   {
     id: {

@@ -61,4 +61,3 @@ document
   .getElementById("pizza-order-form")
   .addEventListener("submit", pizzaChoiceHandler);
 
-//event litner for the pizza choices based on datatype,

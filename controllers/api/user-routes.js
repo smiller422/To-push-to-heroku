@@ -61,5 +61,3 @@ router.post('/logout', (req, res) => {
 
 module.exports = router;
 
-
-//post req to log in, root path '/' , saved in sessions if succesfull
