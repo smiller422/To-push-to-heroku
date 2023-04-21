@@ -4,7 +4,7 @@ const { User, Order } = require("../models");
 //route here gets the user ids
 router.get("/", async (req, res) => {
     console.log(req.session.user_id)
-    console.log("pizza")
+
   try {
     const pizzaData = await Order.findAll({
       where: {
@@ -13,8 +13,6 @@ router.get("/", async (req, res) => {
     });
 
     const pizzas = pizzaData.map((pizza) => pizza.get({ plain: true }));
-
-    console.log("pizza")
 
     res.render("menu", {
       pizzas,
@@ -37,8 +35,22 @@ router.get('/confirm',  async (req, res) => {
     orderDataSize: orderData.size,
     orderDataSauce: orderData.sauce,
     orderDataToppings: orderData.toppings,
+    orderId: orderData.id,
   });
 
+});
+
+router.delete('/cancelOrder/:id', async (req, res) => {
+
+  Order.destroy({
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((deletedOrder) => {
+      res.json(deletedOrder);
+    })
+    .catch((err) => res.json(err));
 });
 
 module.exports = router;
