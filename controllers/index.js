@@ -11,5 +11,3 @@ router.use('/api', apiRoutes);
 
 module.exports = router;
 
-
-//sets up our routes to homeroutes, pizzaroutes, apiroutes

@@ -2,8 +2,6 @@ const router = require('express').Router();
 const User = require('../models/User');
 
 
-//const { User } = require('../models');
-
 router.get('/', async (req, res) => {
 
     console.log("IN THE USER ROUTES");
@@ -12,6 +10,3 @@ router.get('/', async (req, res) => {
 
 
 module.exports = router;
-
-//here is our get request to the login page, root '/' , renders the login page view, the one
-//with the sign up login

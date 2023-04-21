@@ -64,5 +64,4 @@ document
     .querySelector('.login-form')
     .addEventListener('submit', loginFormHandler);
   
- //from activity mini proj  28 public/js/login.js
   
