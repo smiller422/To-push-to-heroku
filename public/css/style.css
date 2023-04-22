@@ -1,0 +1,104 @@
+body {
+
+    text-align: center;
+    padding-top: 10vh;
+    background-color: red;
+}
+
+form input {
+    
+    margin-bottom: 1vh;
+}
+
+button {
+
+    margin-top: 1vh;
+    background-color: white;
+    width: 17vw;
+    height: 4vh;
+    box-shadow: 3px 3px 3px black;
+    font-size: 16px;
+
+}
+
+button:hover {
+
+    cursor: pointer;
+}
+
+.login-signup-div {
+
+    margin: auto;
+    width: 75vw;
+    border: 3px solid black;
+    padding-bottom: 3vh;
+    margin-bottom: 3vh;
+    background-color: white;
+    box-shadow: 5px 5px 5px black;
+}
+
+#welcome-header {
+    margin: auto;
+    background-color: white;
+    width: 30vw;
+    border: 3px solid black;
+    font-size: x-large;
+}
+
+fieldset {
+
+    border: 3px solid white;
+    margin-bottom: 3vh;
+}
+
+legend {
+
+    font-size: 24px;
+}
+
+#customize-pizza-header {
+    
+    margin: auto;
+    background-color: white;
+    width: 20vw;
+    border: 3px solid black;
+    margin-bottom: 5vh;
+    font-size: medium;
+    padding: 1vh 1vh 1vh 1vh;
+}
+
+#pizza-order-form fieldset label {
+
+    font-size: 18px;
+}
+
+#order-submit {
+
+    width: 30vw;
+}
+
+#order-display {
+
+   font-size: x-large;
+   background-color: white;
+   width: 50vw;
+   border: 3px solid black;
+   box-shadow: 5px 5px 5px black;
+   margin: auto;
+   text-align: center;
+}
+
+ul {
+
+    list-style-type: none;
+}
+
+ul li {
+
+    margin-bottom: 3vh;
+}
+
+#cancelOrderForm {
+
+    margin-bottom: 3vh;
+}

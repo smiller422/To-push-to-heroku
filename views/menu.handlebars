@@ -1,0 +1,43 @@
+<h2 id="customize-pizza-header">Customize Your Pizza</h2>
+
+<form id='pizza-order-form'>
+  <fieldset>
+    <legend>Select Pizza Size</legend>
+    <input type='radio' id='small' name='size' value='Small' required />
+    <label for='small'>Small 10"</label>
+    <input type='radio' id='medium' name='size' value='Medium' />
+    <label for='medium'>Medium 12"</label>
+    <input type='radio' id='large' name='size' value='Large' />
+    <label for='large'>Large 14"</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Select Sauce</legend>
+    <input type='radio' id='hearty-marinara' name='sauce' value='Hearty Marinara Sauce' required />
+    <label for='hearty-marinara'>Hearty Marinara Sauce</label>
+    <input type='radio' id='honey-bbq' name='sauce' value='Honey BBQ Sauce' />
+    <label for='honey-bbq'>Honey BBQ Sauce</label>
+    <input type='radio' id='garlic-parmesan' name='sauce' value='Garlic Parmesan Sauce' />
+    <label for='garlic-parmesan'>Garlic Parmesan Sauce</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Select Toppings</legend>
+    <input type='checkbox' id='pepperoni' name='toppings' value='Pepperoni' />
+    <label for='pepperoni'>Pepperoni</label>
+    <input type='checkbox' id='sausage' name='toppings' value='Sausage' />
+    <label for='sausage'>Sausage</label>
+    <input type='checkbox' id='meatball' name='toppings' value='Meatball' />
+    <label for='meatball'>Meatball</label>
+    <input type='checkbox' id='ham' name='toppings' value='Ham' />
+    <label for='ham'>Ham</label>
+    <input type='checkbox' id='onions' name='toppings' value='Onions' />
+    <label for='onions'>Onions</label>
+    <input type='checkbox' id='spinach' name='toppings' value='Spinach' />
+    <label for='spinach'>Spinach</label>
+  </fieldset>
+
+  <button id="order-submit" type='submit'>Place Order</button>
+</form>
+<script src="./js/menu.js"></script>
+
